@@ -1,5 +1,6 @@
 package com.sci.inventoryservice.controller;
 
+import com.sci.inventoryservice.model.Inventory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,12 @@ public class InventoryController {
 		
 		return inventoryService.isStock(skuCode);
 		
+	}
+
+	@GetMapping
+	@ResponseStatus(HttpStatus.OK)
+	public List<InventoryResponse> getAllStocks(){
+		return inventoryService.getAllStocks();
 	}
 
 }
