@@ -1,5 +1,6 @@
 package com.sci.inventoryservice.controller;
 
+import com.sci.inventoryservice.dto.InventoryResponse;
 import com.sci.inventoryservice.model.Inventory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sci.inventoryservice.service.InventoryService;
 
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/inventory")
